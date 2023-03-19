@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-
+.ReactCollapse--collapse{
+  transition:height 500ms;
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
