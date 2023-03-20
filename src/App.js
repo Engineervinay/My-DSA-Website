@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import topics from './data';
+import {topics} from './data';
 import Accordion from './components/Accordion';
 function App() {
   const[open,setOpen]=useState(false);
@@ -19,7 +19,7 @@ function App() {
     <div className='Main '>
 
         {topics.map((data,index)=>{
-            return <Accordion key={index} open={index===open} title={data.name} desc={"demo desc"+data.id} toggle={()=>toggle(index)}/>
+            return <Accordion key={index} open={index===open} title={data.name} desc={"demo desc"+data.id} id={data.id} toggle={()=>toggle(index)}/>
         })}
 
       </div> 

@@ -1,8 +1,9 @@
 import React from 'react'
 import {AiOutlineMinus,AiOutlinePlus} from "react-icons/ai"
 import '../App.css';
+import { problems } from '../data';
 import { Collapse } from 'react-collapse';
-function Accordion({open,toggle,title,desc}) {
+function Accordion({open,toggle,title,desc,id}) {
   return (
     <div className='pt-[10px]'>
       <div className="bg-white py-[25px] px-[50px] flex justify-between items-center cursor-pointer" onClick={toggle}>
@@ -12,7 +13,9 @@ function Accordion({open,toggle,title,desc}) {
         </div>
       </div>
       <Collapse isOpened={open}>
-        <div className='bg-white px-[50px] pb-[20px] '>{desc} </div>
+        <div className='bg-white px-[50px] pb-[20px] '>
+            
+           </div>
       </Collapse>
     </div>
   )
