@@ -73,7 +73,7 @@ const topics=[
     },
 ]
 
-const problems=[
+let problems=[
     {
         name:"Pattern 1",
         topicRefid:1,
@@ -124,4 +124,9 @@ const problems=[
       `,
     },
 ]
-export {problems,topics};
+function getLength(){
+    return (
+        problems.length
+    )
+}
+export {problems,topics,getLength};

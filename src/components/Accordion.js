@@ -16,15 +16,15 @@ function Accordion({open,toggle,title,desc,id}) {
   }
  
   return (
-    <div className='pt-[10px]'>
-      <div className="bg-white py-[25px] px-[50px] flex justify-between items-center cursor-pointer" onClick={toggle}>
+    <div className='pt-[10px]  '>
+      <div className="bg-white bg-opacity-20 rounded-lg py-[25px] px-[50px] flex justify-between items-center cursor-pointer" onClick={toggle}>
         <p className="text-[22px] font-semibold">{title}</p>
         <div className='text-[30px]'>
           {open ? <AiOutlineMinus/> : <AiOutlinePlus/>}
         </div>
       </div>
       <Collapse isOpened={open}>
-        <div className='bg-white px-[50px] pb-[20px] '>
+        <div className='bg-white bg-opacity-20 rounded-b-lg px-[50px] pb-[20px] '>
         {problems.map((data,index)=>{
             if(id===data.topicRefid){return <SubAccordion key={index} open={index===subopen} name={data.name} gfg={data.gfg} leetcode={data.leetcode} article={data.article} youtube={data.youtube }code={data.code}  toggle={()=>subtoggle(index)}/>
  }
