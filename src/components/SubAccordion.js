@@ -1,4 +1,6 @@
 import React from 'react'
+import { CopyBlock, dracula } from "react-code-blocks";
+
 import {AiOutlineMinus,AiOutlinePlus,AiOutlineYoutube} from "react-icons/ai"
 import{SiGeeksforgeeks,SiLeetcode} from "react-icons/si"
 import '../App.css';
@@ -12,14 +14,19 @@ function SubAccordion({open,toggle,name,gfg,leetcode,article,youtube,code}) {
         <a href={youtube}> <AiOutlineYoutube/></a>
         <a href={gfg}> <SiGeeksforgeeks/></a>
         <a href={leetcode}> <SiLeetcode/></a>
-        
-        
           {open ? <AiOutlineMinus/> : <AiOutlinePlus/>}
         </div>
       </div>
       <Collapse isOpened={open}>
+
         <div className='bg-white px-[50px] pb-[20px] '>
-            
+        <CopyBlock
+    text={code}
+    language={"cpp"}
+    showLineNumbers={true}
+    theme={dracula}
+    codeBlock
+  />
            </div>
       </Collapse>
     </div>
